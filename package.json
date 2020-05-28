@@ -1,0 +1,26 @@
+{
+  "name": "code2graph",
+  "version": "1.0.0",
+  "description": "代码生成图表",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bibidu/code2graph.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bibidu/code2graph/issues"
+  },
+  "homepage": "https://github.com/bibidu/code2graph#readme",
+  "devDependencies": {},
+  "dependencies": {
+    "@babel/parser": "^7.10.1",
+    "@babel/traverse": "^7.10.1"
+  }
+}
