@@ -12,7 +12,9 @@ module.exports = {
   },
   resolve: {
     alias: {
-      '@utils': resolve('util')
+      '@utils': resolve('util'),
+      '@util/util': resolve('util'),
+      '@util/axios': resolve('util'),
     }
   },
   module: {

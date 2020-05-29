@@ -19,7 +19,5 @@
   "homepage": "https://github.com/bibidu/code2graph#readme",
   "devDependencies": {},
   "dependencies": {
-    "@babel/parser": "^7.10.1",
-    "@babel/traverse": "^7.10.1"
   }
 }

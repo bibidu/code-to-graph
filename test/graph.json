@@ -1,0 +1,863 @@
+{
+  "1": {
+    "name": "judgeHaveMainPage",
+    "type": "FunctionDeclaration",
+    "comments": {
+      "leading": [
+        " 判断用户是否有主页"
+      ],
+      "trailing": [
+        " 获取header中的地理位置信息"
+      ]
+    },
+    "loc": {
+      "start": {
+        "line": 5,
+        "column": 7
+      },
+      "end": {
+        "line": 7,
+        "column": 1
+      }
+    },
+    "async": false,
+    "children": []
+  },
+  "2": {
+    "name": "getLocationInfo",
+    "type": "FunctionDeclaration",
+    "comments": {
+      "leading": [
+        " 获取header中的地理位置信息"
+      ],
+      "trailing": [
+        " 首页数据上报，已废弃",
+        " export function reportWhenInMain (data) {",
+        "   return http.serilizeGet('/user/profile/visit', data)",
+        " }",
+        " 访客数据上报"
+      ]
+    },
+    "loc": {
+      "start": {
+        "line": 9,
+        "column": 7
+      },
+      "end": {
+        "line": 11,
+        "column": 1
+      }
+    },
+    "async": false,
+    "children": []
+  },
+  "3": {
+    "name": "reportVisit",
+    "type": "FunctionDeclaration",
+    "comments": {
+      "leading": [
+        " 首页数据上报，已废弃",
+        " export function reportWhenInMain (data) {",
+        "   return http.serilizeGet('/user/profile/visit', data)",
+        " }",
+        " 访客数据上报"
+      ],
+      "trailing": [
+        " 获取个人主页feed列表"
+      ]
+    },
+    "loc": {
+      "start": {
+        "line": 19,
+        "column": 7
+      },
+      "end": {
+        "line": 21,
+        "column": 1
+      }
+    },
+    "async": false,
+    "children": []
+  },
+  "4": {
+    "name": "getMainList",
+    "type": "FunctionDeclaration",
+    "comments": {
+      "leading": [
+        " 获取个人主页feed列表"
+      ],
+      "trailing": [
+        " 查询feed详情"
+      ]
+    },
+    "loc": {
+      "start": {
+        "line": 24,
+        "column": 7
+      },
+      "end": {
+        "line": 28,
+        "column": 1
+      }
+    },
+    "async": true,
+    "children": []
+  },
+  "5": {
+    "name": "getFeedDetail",
+    "type": "FunctionDeclaration",
+    "comments": {
+      "leading": [
+        " 查询feed详情"
+      ],
+      "trailing": [
+        " 查询评论列表"
+      ]
+    },
+    "loc": {
+      "start": {
+        "line": 31,
+        "column": 7
+      },
+      "end": {
+        "line": 35,
+        "column": 1
+      }
+    },
+    "async": true,
+    "children": []
+  },
+  "6": {
+    "name": "getCommentList",
+    "type": "FunctionDeclaration",
+    "comments": {
+      "leading": [
+        " 查询评论列表"
+      ],
+      "trailing": [
+        " 查询动态的评论列表"
+      ]
+    },
+    "loc": {
+      "start": {
+        "line": 38,
+        "column": 7
+      },
+      "end": {
+        "line": 40,
+        "column": 1
+      }
+    },
+    "async": false,
+    "children": []
+  },
+  "7": {
+    "name": "getActiveCommentList",
+    "type": "FunctionDeclaration",
+    "comments": {
+      "leading": [
+        " 查询动态的评论列表"
+      ],
+      "trailing": [
+        " 查询回复列表"
+      ]
+    },
+    "loc": {
+      "start": {
+        "line": 43,
+        "column": 7
+      },
+      "end": {
+        "line": 45,
+        "column": 1
+      }
+    },
+    "async": false,
+    "children": []
+  },
+  "8": {
+    "name": "getReplyList",
+    "type": "FunctionDeclaration",
+    "comments": {
+      "leading": [
+        " 查询回复列表"
+      ],
+      "trailing": [
+        " 点赞、取消点赞帖子"
+      ]
+    },
+    "loc": {
+      "start": {
+        "line": 48,
+        "column": 7
+      },
+      "end": {
+        "line": 50,
+        "column": 1
+      }
+    },
+    "async": false,
+    "children": []
+  },
+  "9": {
+    "name": "likeAny",
+    "type": "FunctionDeclaration",
+    "comments": {
+      "leading": [
+        " 点赞、取消点赞帖子"
+      ],
+      "trailing": [
+        " 【动态】点赞、取消点赞帖子"
+      ]
+    },
+    "loc": {
+      "start": {
+        "line": 53,
+        "column": 7
+      },
+      "end": {
+        "line": 55,
+        "column": 1
+      }
+    },
+    "async": false,
+    "children": []
+  },
+  "10": {
+    "name": "likeActiveFeed",
+    "type": "FunctionDeclaration",
+    "comments": {
+      "leading": [
+        " 【动态】点赞、取消点赞帖子"
+      ],
+      "trailing": [
+        " 关注、取关"
+      ]
+    },
+    "loc": {
+      "start": {
+        "line": 58,
+        "column": 7
+      },
+      "end": {
+        "line": 60,
+        "column": 1
+      }
+    },
+    "async": false,
+    "children": []
+  },
+  "11": {
+    "name": "focusAny",
+    "type": "FunctionDeclaration",
+    "comments": {
+      "leading": [
+        " 关注、取关"
+      ],
+      "trailing": [
+        " 获取个人主页顶部信息"
+      ]
+    },
+    "loc": {
+      "start": {
+        "line": 62,
+        "column": 7
+      },
+      "end": {
+        "line": 64,
+        "column": 1
+      }
+    },
+    "async": false,
+    "children": []
+  },
+  "12": {
+    "name": "getUserTopInfo",
+    "type": "FunctionDeclaration",
+    "comments": {
+      "leading": [
+        " 获取个人主页顶部信息"
+      ],
+      "trailing": [
+        " 查询粉丝列表"
+      ]
+    },
+    "loc": {
+      "start": {
+        "line": 67,
+        "column": 7
+      },
+      "end": {
+        "line": 69,
+        "column": 1
+      }
+    },
+    "async": false,
+    "children": []
+  },
+  "13": {
+    "name": "getFansList",
+    "type": "FunctionDeclaration",
+    "comments": {
+      "leading": [
+        " 查询粉丝列表"
+      ],
+      "trailing": [
+        " 查询我的关注"
+      ]
+    },
+    "loc": {
+      "start": {
+        "line": 72,
+        "column": 7
+      },
+      "end": {
+        "line": 74,
+        "column": 1
+      }
+    },
+    "async": false,
+    "children": []
+  },
+  "14": {
+    "name": "getFocusList",
+    "type": "FunctionDeclaration",
+    "comments": {
+      "leading": [
+        " 查询我的关注"
+      ],
+      "trailing": [
+        " 查询最近访客"
+      ]
+    },
+    "loc": {
+      "start": {
+        "line": 77,
+        "column": 7
+      },
+      "end": {
+        "line": 79,
+        "column": 1
+      }
+    },
+    "async": false,
+    "children": []
+  },
+  "15": {
+    "name": "getVisitList",
+    "type": "FunctionDeclaration",
+    "comments": {
+      "leading": [
+        " 查询最近访客"
+      ],
+      "trailing": [
+        " 查询收到的赞"
+      ]
+    },
+    "loc": {
+      "start": {
+        "line": 82,
+        "column": 7
+      },
+      "end": {
+        "line": 84,
+        "column": 1
+      }
+    },
+    "async": false,
+    "children": []
+  },
+  "16": {
+    "name": "getFavList",
+    "type": "FunctionDeclaration",
+    "comments": {
+      "leading": [
+        " 查询收到的赞"
+      ],
+      "trailing": [
+        " 对帖子评论"
+      ]
+    },
+    "loc": {
+      "start": {
+        "line": 87,
+        "column": 7
+      },
+      "end": {
+        "line": 89,
+        "column": 1
+      }
+    },
+    "async": false,
+    "children": []
+  },
+  "17": {
+    "name": "commentAnyFeed",
+    "type": "FunctionDeclaration",
+    "comments": {
+      "leading": [
+        " 对帖子评论"
+      ],
+      "trailing": [
+        " 对评论进行回复"
+      ]
+    },
+    "loc": {
+      "start": {
+        "line": 92,
+        "column": 7
+      },
+      "end": {
+        "line": 94,
+        "column": 1
+      }
+    },
+    "async": false,
+    "children": []
+  },
+  "18": {
+    "name": "replyAnyComment",
+    "type": "FunctionDeclaration",
+    "comments": {
+      "leading": [
+        " 对评论进行回复"
+      ],
+      "trailing": [
+        " 查询对方是否关注我"
+      ]
+    },
+    "loc": {
+      "start": {
+        "line": 96,
+        "column": 7
+      },
+      "end": {
+        "line": 98,
+        "column": 1
+      }
+    },
+    "async": false,
+    "children": []
+  },
+  "19": {
+    "name": "isFocusMe",
+    "type": "FunctionDeclaration",
+    "comments": {
+      "leading": [
+        " 查询对方是否关注我"
+      ],
+      "trailing": [
+        " 查询互动消息列表"
+      ]
+    },
+    "loc": {
+      "start": {
+        "line": 100,
+        "column": 7
+      },
+      "end": {
+        "line": 102,
+        "column": 1
+      }
+    },
+    "async": false,
+    "children": []
+  },
+  "20": {
+    "name": "getInteractList",
+    "type": "FunctionDeclaration",
+    "comments": {
+      "leading": [
+        " 查询互动消息列表"
+      ],
+      "trailing": [
+        " 获取本地人列表"
+      ]
+    },
+    "loc": {
+      "start": {
+        "line": 104,
+        "column": 7
+      },
+      "end": {
+        "line": 106,
+        "column": 1
+      }
+    },
+    "async": false,
+    "children": []
+  },
+  "21": {
+    "name": "getLocalList",
+    "type": "FunctionDeclaration",
+    "comments": {
+      "leading": [
+        " 获取本地人列表"
+      ],
+      "trailing": [
+        " 查询动态点赞列表"
+      ]
+    },
+    "loc": {
+      "start": {
+        "line": 108,
+        "column": 7
+      },
+      "end": {
+        "line": 110,
+        "column": 1
+      }
+    },
+    "async": false,
+    "children": []
+  },
+  "22": {
+    "name": "getActiveFeedLikeList",
+    "type": "FunctionDeclaration",
+    "comments": {
+      "leading": [
+        " 查询动态点赞列表"
+      ],
+      "trailing": [
+        " // 查询动态详情的评论",
+        " export function getActiveComments (data) {",
+        "   return http.serilizeGet('/comment/active/list', data)",
+        " }",
+        " 删除动态feed"
+      ]
+    },
+    "loc": {
+      "start": {
+        "line": 112,
+        "column": 7
+      },
+      "end": {
+        "line": 114,
+        "column": 1
+      }
+    },
+    "async": false,
+    "children": []
+  },
+  "23": {
+    "name": "delActiveFeed",
+    "type": "FunctionDeclaration",
+    "comments": {
+      "leading": [
+        " // 查询动态详情的评论",
+        " export function getActiveComments (data) {",
+        "   return http.serilizeGet('/comment/active/list', data)",
+        " }",
+        " 删除动态feed"
+      ],
+      "trailing": [
+        " 删除动态feed的评论"
+      ]
+    },
+    "loc": {
+      "start": {
+        "line": 120,
+        "column": 7
+      },
+      "end": {
+        "line": 122,
+        "column": 1
+      }
+    },
+    "async": false,
+    "children": []
+  },
+  "24": {
+    "name": "delActiveFeedComment",
+    "type": "FunctionDeclaration",
+    "comments": {
+      "leading": [
+        " 删除动态feed的评论"
+      ],
+      "trailing": [
+        " 查询话题聚合页列表"
+      ]
+    },
+    "loc": {
+      "start": {
+        "line": 124,
+        "column": 7
+      },
+      "end": {
+        "line": 126,
+        "column": 1
+      }
+    },
+    "async": false,
+    "children": []
+  },
+  "25": {
+    "name": "getTopicList",
+    "type": "FunctionDeclaration",
+    "comments": {
+      "leading": [
+        " 查询话题聚合页列表"
+      ],
+      "trailing": [
+        " 根据话题id查询话题内容"
+      ]
+    },
+    "loc": {
+      "start": {
+        "line": 128,
+        "column": 7
+      },
+      "end": {
+        "line": 130,
+        "column": 1
+      }
+    },
+    "async": false,
+    "children": []
+  },
+  "26": {
+    "name": "getTopicById",
+    "type": "FunctionDeclaration",
+    "comments": {
+      "leading": [
+        " 根据话题id查询话题内容"
+      ],
+      "trailing": [
+        " 查询所有身份标签"
+      ]
+    },
+    "loc": {
+      "start": {
+        "line": 132,
+        "column": 7
+      },
+      "end": {
+        "line": 134,
+        "column": 1
+      }
+    },
+    "async": false,
+    "children": []
+  },
+  "27": {
+    "name": "getUserIdentityTagList",
+    "type": "FunctionDeclaration",
+    "comments": {
+      "leading": [
+        " 查询所有身份标签"
+      ],
+      "trailing": [
+        " 根据feedId查询个人主页feed"
+      ]
+    },
+    "loc": {
+      "start": {
+        "line": 136,
+        "column": 7
+      },
+      "end": {
+        "line": 138,
+        "column": 1
+      }
+    },
+    "async": false,
+    "children": []
+  },
+  "28": {
+    "name": "getMainPageFeedInfo",
+    "type": "FunctionDeclaration",
+    "comments": {
+      "leading": [
+        " 根据feedId查询个人主页feed"
+      ],
+      "trailing": [
+        " ====================== 本地内容官 userpublish ======================"
+      ]
+    },
+    "loc": {
+      "start": {
+        "line": 140,
+        "column": 7
+      },
+      "end": {
+        "line": 142,
+        "column": 1
+      }
+    },
+    "async": false,
+    "children": []
+  },
+  "29": {
+    "name": "getLocalContentActivityAllData",
+    "type": "FunctionDeclaration",
+    "comments": {
+      "leading": [
+        " const testObj = { userId: '47325277713684' }",
+        " 首次进入 内容官活动页 请求数据"
+      ],
+      "trailing": [
+        " 查询 我的发帖（当前：内容官活动页）"
+      ]
+    },
+    "loc": {
+      "start": {
+        "line": 153,
+        "column": 7
+      },
+      "end": {
+        "line": 157,
+        "column": 1
+      }
+    },
+    "async": false,
+    "children": []
+  },
+  "30": {
+    "name": "getLocalContentActivityMyPosts",
+    "type": "FunctionDeclaration",
+    "comments": {
+      "leading": [
+        " 查询 我的发帖（当前：内容官活动页）"
+      ],
+      "trailing": [
+        " 查询 人气文章"
+      ]
+    },
+    "loc": {
+      "start": {
+        "line": 159,
+        "column": 7
+      },
+      "end": {
+        "line": 164,
+        "column": 1
+      }
+    },
+    "async": false,
+    "children": []
+  },
+  "31": {
+    "name": "getLocalContentActivityHotList",
+    "type": "FunctionDeclaration",
+    "comments": {
+      "leading": [
+        " 查询 人气文章"
+      ],
+      "trailing": [
+        " 首次进入 本地内容管理页 请求数据"
+      ]
+    },
+    "loc": {
+      "start": {
+        "line": 166,
+        "column": 7
+      },
+      "end": {
+        "line": 170,
+        "column": 1
+      }
+    },
+    "async": false,
+    "children": []
+  },
+  "32": {
+    "name": "getLocalContentManageAllData",
+    "type": "FunctionDeclaration",
+    "comments": {
+      "leading": [
+        " 首次进入 本地内容管理页 请求数据"
+      ],
+      "trailing": [
+        " 查询 我的发帖（当前：内容管理页）"
+      ]
+    },
+    "loc": {
+      "start": {
+        "line": 172,
+        "column": 7
+      },
+      "end": {
+        "line": 176,
+        "column": 1
+      }
+    },
+    "async": false,
+    "children": []
+  },
+  "33": {
+    "name": "getLocalContentManageMyPosts",
+    "type": "FunctionDeclaration",
+    "comments": {
+      "leading": [
+        " 查询 我的发帖（当前：内容管理页）"
+      ],
+      "trailing": [
+        " 删除帖子"
+      ]
+    },
+    "loc": {
+      "start": {
+        "line": 178,
+        "column": 7
+      },
+      "end": {
+        "line": 183,
+        "column": 1
+      }
+    },
+    "async": false,
+    "children": []
+  },
+  "34": {
+    "name": "deletePost",
+    "type": "FunctionDeclaration",
+    "comments": {
+      "leading": [
+        " 删除帖子"
+      ],
+      "trailing": [
+        " ====================== 本地内容官 userpublish ======================"
+      ]
+    },
+    "loc": {
+      "start": {
+        "line": 185,
+        "column": 7
+      },
+      "end": {
+        "line": 187,
+        "column": 1
+      }
+    },
+    "async": false,
+    "children": []
+  },
+  "35": {
+    "name": "ast2code",
+    "type": "FunctionDeclaration",
+    "comments": {
+      "leading": [],
+      "trailing": []
+    },
+    "loc": {
+      "start": {
+        "line": 1,
+        "column": 0
+      },
+      "end": {
+        "line": 3,
+        "column": 1
+      }
+    },
+    "async": false,
+    "children": [
+      36
+    ]
+  },
+  "36": {
+    "name": "console",
+    "fullName": "console.log",
+    "type": "CallExpression",
+    "parent": 35
+  }
+}

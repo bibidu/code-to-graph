@@ -1,61 +1,56 @@
 const {
   idGenerator, // 唯一id生成
-  getCallExpressionAboutFn, // 提取CallExpress的相关信息
   getComments, // 获取节点的注释信息
 } = require('./utils')
 const {
   FunctionNode,
   CallFunctionNode,
-} = require('./Node')
-
-const map = {}
+} = require('./nodeCreator')
+const ast2json = require('./ast2json')
+const store = require('./store')
 
 module.exports = function start() {
   return {
     visitor: {
       ExportNamedDeclaration(path) {
-        if (path.get('declaration').node && path.get('declaration.declarations').node) {
-          const id = idGenerator()
-          const maybeArrowVar = path.get('declaration.declarations.0')
-          if (maybeArrowVar.get('init') && maybeArrowVar.get('init').isArrowFunctionExpression()) {
-            const name = maybeArrowVar.get('id.name').node
-  
-            map[id] = FunctionNode({
-              name,
-              type: path.type,
+        if (path.get('declaration').node) {
+          const needJudgePath = path.get('declaration')
+
+          const nodes = ast2json.FunctionDeclaration(needJudgePath)
+          if (nodes) {
+            const id = idGenerator()
+            store.add(id, FunctionNode({
+              ...nodes,
               comments: getComments(path),
-              children: []
-            })
+            }))
           }
         }
       },
 
       FunctionDeclaration(path) {
-        const id = idGenerator()
-        const name = path.get('id').get('name').node
-
-        // 保存当前函数节点信息
-        map[id] = FunctionNode({
-          name,
-          type: path.type,
-          comments: getComments(path),
-          children: []
-        })
-
+        let id = null
+        const nodes = ast2json.FunctionDeclaration(path)
+        if (nodes) {
+          store.add((id = idGenerator()), FunctionNode({
+            ...nodes,
+            comments: getComments(path),
+          }))
+        }
+        
+        if (!id) return path.skip()
         path.traverse({
           CallExpression(_path) {
-            const _id = idGenerator()
-            const { headNameNode, fullName } = getCallExpressionAboutFn(_path)
-  
-            // 保存当前函数节点信息
-            map[_id] = CallFunctionNode({
-              name: headNameNode.node.name,
-              fullName,
-              type: _path.type,
-              comments: '',
-              parent: id
-            })
-            map[id].children.push(_id)
+            const nodes = ast2json.CallExpression(_path)
+            const childId = idGenerator()
+            store.add(childId, CallFunctionNode({
+              ...nodes,
+              parent: id,
+            }))
+
+            store.update(id, (state) => ({
+              ...state,
+              children: [...state.children, childId]
+            }))
           }
         })
       },
@@ -63,7 +58,8 @@ module.exports = function start() {
       Program: {
         exit() {
           console.log('exit')
-          console.log(map)
+          const result = store.get()
+          require('fs').writeFileSync('./graph.json', JSON.stringify(result, null, 2), 'utf8')
         }
       }
     }
