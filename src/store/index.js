@@ -36,14 +36,14 @@ function needDoAboutNodeRange(type) {
   return false
 }
 exports.isNodeExist = ({ type, loc }) => {
-  if (needDoAboutNodeRange(type)) {
+  if (needDoAboutNodeRange(type) && loc) {
     const id = getLineColumnId(loc)
     return nodeRange[id]
   }
   return false
 }
 function saveNodeRange(id, nodeInfo) {
-  if (needDoAboutNodeRange(nodeInfo.type)) {
+  if (needDoAboutNodeRange(nodeInfo.type) && nodeInfo.loc) {
     const rangeId = getLineColumnId(nodeInfo.loc)
     nodeRange[rangeId] = id
   }

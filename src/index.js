@@ -12,20 +12,20 @@ const store = require('./store')
 module.exports = function start() {
   return {
     visitor: {
-      ExportNamedDeclaration(path) {
-        if (path.get('declaration').node) {
-          const needJudgePath = path.get('declaration')
+      // ExportNamedDeclaration(path) {
+      //   if (path.get('declaration').node) {
+      //     const needJudgePath = path.get('declaration')
 
-          const nodes = ast2json.FunctionDeclaration(needJudgePath)
-          if (nodes) {
-            const id = idGenerator()
-            store.add(id, FunctionNode({
-              ...nodes,
-              comments: getComments(path),
-            }))
-          }
-        }
-      },
+      //     const nodes = ast2json.FunctionDeclaration(needJudgePath)
+      //     if (nodes) {
+      //       const id = idGenerator()
+      //       store.add(id, FunctionNode({
+      //         ...nodes,
+      //         comments: getComments(path),
+      //       }))
+      //     }
+      //   }
+      // },
 
       FunctionDeclaration(path) {
         let id = null
